@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Menu from "./components/menu/Menu.jsx";
-import MenuAdmin from "./components/menu/MenuAdmin.jsx";
+import Menu from "./components/menu/menu.jsx";
+import MenuAdmin from "./components/menu/menuAdmin.jsx";
 
 import App from './App.jsx'
 
