@@ -60,8 +60,10 @@ export default function App() {
           Safran<span>Lounge</span>
         </div>
         <ul className="nav-links">
-          {["Haqqımızda", "Atmosfer", "Menyu", "Rezervasiya"].map(l => (
-            <li key={l}><a href={`#${l.toLowerCase()}`}>{l}</a></li>
+          {["Menu"].map(l => (
+            <Link key={l} to={`${l.toLowerCase()}`}>
+              <a>{l}</a>
+            </Link>
           ))}
         </ul>
         {/* <button className="nav-reserve" onClick={() => document.getElementById("reservations").scrollIntoView({ behavior: "smooth" })}>
@@ -75,9 +77,11 @@ export default function App() {
       {/* MOBILE MENU */}
       <div className={`menu-overlay ${menuOpen ? "open" : ""}`} onClick={() => setMenuOpen(false)} />
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        {["Haqqımızda", "Atmosfer", "Menyu", "Rezervasiya"].map(l => (
-          <a key={l} href={`#${l.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{l}</a>
-        ))}
+          {["Menu"].map(l => (
+            <Link key={l} to={`${l.toLowerCase()}`}>
+              <a>{l}</a>
+            </Link>
+          ))}
         <button className="btn-primary" style={{ marginTop: "2rem" }}
           onClick={() => { setMenuOpen(false); document.getElementById("reservations").scrollIntoView({ behavior: "smooth" }); }}>
           Masa Rezerv Et
