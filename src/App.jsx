@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import  { useEffect, useRef } from 'react'
 import './App.css'
+import {Link} from "react-router-dom";
 
 const ATMOSPHERE_CARDS = [
   { emoji: "🧱", bg: "linear-gradient(135deg, #3d2318 0%, #1e1e1c 100%)", label: "Açıq Kərpic Divarlar" },
@@ -63,9 +64,9 @@ export default function App() {
             <li key={l}><a href={`#${l.toLowerCase()}`}>{l}</a></li>
           ))}
         </ul>
-        <button className="nav-reserve" onClick={() => document.getElementById("reservations").scrollIntoView({ behavior: "smooth" })}>
+        {/* <button className="nav-reserve" onClick={() => document.getElementById("reservations").scrollIntoView({ behavior: "smooth" })}>
           Masa Rezerv Et
-        </button>
+        </button> */}
         <button className={`hamburger ${menuOpen ? "open" : ""}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <span /><span /><span />
         </button>
